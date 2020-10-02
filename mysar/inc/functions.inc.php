@@ -373,7 +373,8 @@ function url_addParameter($url,$newParameter,$newValue) {
 	$parameters=explode('&',$url);
 	reset($parameters);
 	$newQueryString="";
-	while(list($key,$value)=each($parameters)) {
+	//while(list($key,$value)=each($parameters)) {
+	foreach ($parameters as $key => $value) {
 		if(!empty($newQueryString)) {
 			$newQueryString=$newQueryString.'&';
 		}
@@ -397,7 +398,8 @@ function url_createSortParameters($url,$validParameters) {
 // modifies the given url, to include ASC and DESC parameters for the parameters given
 		
 	reset($validParameters);
-	while(list($key,$value)=each($validParameters)) {
+	//while(list($key,$value)=each($validParameters)) {
+	foreach ($validParameters as $key => $value) {
 		$tmpUrl=url_addParameter($url,'OrderBy',$value);
 		$newUrl[$value.'ASC']=url_addParameter($tmpUrl,'OrderMethod','ASC');
 		$newUrl[$value.'DESC']=url_addParameter($tmpUrl,'OrderMethod','DESC');

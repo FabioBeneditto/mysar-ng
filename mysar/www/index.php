@@ -1,4 +1,9 @@
 <?php
+
+#error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+#error_reporting(E_ALL);
+
+
 # Program: mysar, File: www/index.php
 # Copyright 2004-2006, Stoilis Giannis <giannis@stoilis.gr>
 #
@@ -17,8 +22,9 @@
 # along with Foobar; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+#$DEBUG_MODE='cmd';
 $DEBUG_MODE='web';
-$DEBUG_LEVEL='20';
+$DEBUG_LEVEL='0';
 
 if(file_exists('install') && !file_exists('install/install.done')) {
 	require('install/index.php');
@@ -35,7 +41,7 @@ require($basePath.'/inc/common.inc.php');
 $pageVars['programName']=PROGRAM_NAME_LONG;
 $pageVars['programVersion']=PROGRAM_VERSION;
 
-$smarty->register_modifier('bytesToHRF','bytesToHRF');
+#$smarty->register_modifier('bytesToHRF','bytesToHRF');
 $smarty->assign('pageVars',$pageVars);
 
 // get last accessed record
@@ -62,7 +68,7 @@ if(empty($_REQUEST['date'])) {
 	$pageVars['date']=$_REQUEST['date'];
 }
 
-$pageVars['uri']=$_SERVER['REQUEST_URI'];
+$pageVars['uri']=isset($_SERVER['REQUEST_URI']);
 $pageVars['thisDateFormatted']=date('l, d F Y',date_timestampFromDbDate($pageVars['date'],'-'));
 $dateArray=explode('-',$pageVars['date']);
 $pageVars['today']=date('Y-m-d');

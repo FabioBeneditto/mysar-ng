@@ -1,6 +1,6 @@
 #!/bin/bash
 
-### 01 00 * * * root /var/www/html/mysar/bin/mysar-rotate-diario.sh
+### 01 00 * * * root /srv/www/htdocs/mysar/bin/mysar-rotate-diario.sh
 
 
 LOGDIR="/var/log/squid"
@@ -23,7 +23,7 @@ mv ${LOGDIR}/access.log ${MENSALDIR}/access.log-${ONTEM}
 
 # cria novo arquivo de log
 touch ${LOGDIR}/access.log
-chown squid.apache ${LOGDIR}/access.log
+chown squid.www ${LOGDIR}/access.log
 
 # inicia o squid
 /etc/init.d/squid start

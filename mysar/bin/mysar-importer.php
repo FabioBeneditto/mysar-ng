@@ -32,7 +32,7 @@ $DEBUG_LEVEL='30';
 // Common tasks for both web and cmd
 require($basePath.'/inc/common.inc.php');
 
-error_reporting(E_ALL);
+#error_reporting(E_ALL);
 debug('Start timestamp is '.$startTime,40,__FILE__,__LINE__);
 debug('Configuration:'.print_r($iniConfig,TRUE),40,__FILE__,__LINE__);
 

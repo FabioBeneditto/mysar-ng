@@ -68,7 +68,7 @@
     {assign var=bytesTotal value="0"}
     {foreach from=$pageVars.summaryIPRecords item=record}
       {if $record.hostdescription!=""}
-        {assign var="thisRecord" value=$record.hostdescription"}
+        {assign var="thisRecord" value=$record.hostdescription}
       {elseif $record.hostip!=$record.hostname}
         {assign var="thisRecord" value=$record.hostname}
       {else}

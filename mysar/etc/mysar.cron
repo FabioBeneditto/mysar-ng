@@ -1,13 +1,13 @@
 # mysar not only runs every minute but it also expects to be run every minute.
 # If you wish to change this, you need to adjust not only the cron entries below but also the $maxRunTime inside bin/mysar-importer.php
-#* * * * *	root	/var/www/html/mysar/bin/mysar-resolver.php > /var/www/html/mysar/log/mysar-resolver.log 2>&1
-#0 0 * * *	root	/var/www/html/mysar/bin/mysar-maintenance.php > /var/www/html/mysar/log/mysar-maintenance.log 2>&1
+#* * * * *	root	/srv/www/htdocs/mysar/bin/mysar-resolver.php > /srv/www/htdocs/mysar/log/mysar-resolver.log 2>&1
+#0 0 * * *	root	/srv/www/htdocs/mysar/bin/mysar-maintenance.php > /srv/www/htdocs/mysar/log/mysar-maintenance.log 2>&1
 
 ##### IMPORTER #####
 ## PHP - Slow but tested.
-#* * * * *	root	/var/www/html/mysar/bin/mysar-importer.php > /var/www/html/mysar/log/mysar-importer.log 2>&1
+#* * * * *	root	/srv/www/htdocs/mysar/bin/mysar-importer.php > /srv/www/htdocs/mysar/log/mysar-importer.log 2>&1
 ## Binary. Fast but needs compile. The defult choice. check README.
-* * * * *      root    /usr/bin/mysar > /var/www/html/mysar/log/mysar-importer.log 2>&1
+* * * * *      root    /usr/bin/mysar > /srv/www/htdocs/mysar/log/mysar-importer.log 2>&1
 
 ##### LOG ROTATE #####
-01 00 * * * root /var/www/html/mysar/bin/mysar-rotate-diario.sh
+01 00 * * * root /srv/www/htdocs/mysar/bin/mysar-rotate-diario.sh

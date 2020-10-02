@@ -7,8 +7,8 @@
        <tr><td>&Uacute;ltima limpeza Efetuada na base: </td><td>{$pageVars.lastCleanUp}</td>
       </table></div>
     <hr>
-    <a href="http://giannis.stoilis.gr/software/mysar/" target="_blank">{$pageVars.programName}</a> {$pageVars.programVersion} (c) 2004-2005 by <a href="mailto:giannis@stoilis.gr">Giannis Stoilis</a>
+    <a href="https://github.com/coffnix/mysar-ng" target="_blank">{$pageVars.programName}</a> {$pageVars.programVersion} (c) 2014-2020 by <a href="mailto:raphaelbastos@area31.net.br">Raphael Bastos aka coffnix</a>
 <br>Licenced under the <a href="http://www.fsf.org/copyleft/gpl.html" target="_blank">GNU General Public Licence</a>.
-    </a><br><font size="2"> Tradu&ccedil;&atilde;o para Portugues (pt_BR) Cassiano Martin </font>
+    </a><br><font size="2"> Tradu&ccedil;&atilde;o para Portugues (pt_BR) Raphael Bastos </font>
   </center></body>
 </html>

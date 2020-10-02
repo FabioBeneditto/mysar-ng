@@ -1,5 +1,5 @@
-Alias /mysar /var/www/html/mysar/www
-<Directory "/var/www/html/mysar/www">
+Alias /mysar /srv/www/htdocs/mysar/www
+<Directory "/srv/www/htdocs/mysar/www">
         Options Indexes MultiViews
         Options Indexes FollowSymLinks
         AllowOverride None
